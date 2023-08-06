@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'MyCustomFont';
+
+  src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype'),
+       url('./assets/fonts/Ubuntu-Medium.ttf') format('truetype'),
+       url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MyCustomFont';
+}
+.mainSection{
+  display: flex;
+  width: 60vw;
+  height: 85vh;
+  background-color: rgb(188, 199, 211);
+}
+
+.leftAside{
+  margin: 10px;
+  padding: 10px;
+  width: 15vw;
+  height: 75vh;
+  border-radius: 5px;
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+}
+.rightAside{
+  width: 100%;
+  position: relative;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+/* Define the counter and set its initial value to 0 */
+ol {
+  counter-reset: item;
+  list-style: none;
+  padding: 0px;
+}
+
+/* Target the li elements inside the ol */
+li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Use the counter value for each list item */
+li.circle::before {
+  content: counter(item); /* Display the current counter value */
+  counter-increment: item; /* Increment the counter for each list item */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: #007bff00;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+}
+.leftAside p{
+  margin: 0;
+}
+li:hover{
+  cursor: pointer;
+}
+
+/* Info */
+.rightAside p , h1{
+  text-align: center;
+  font-size: 22px;
+}
+.rightAside p{
+  color: #282727d4;
+}
+.info .plan  > h1{
+  font-weight: bolder;
+}
+.formInfo{
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+.info input{
+  cursor:pointer;
+  width: 30vw;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.rightAside button{
+  cursor:pointer;
+  padding: 7px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(12, 12, 103);
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+.nonebtn{
+  visibility: hidden;
+}
+.planContent{
+  display: grid;
+  grid-template-columns: repeat(3 , 30%);
+}
+.planContent div{
+  padding: 10px;
+  border-radius: 5px;
+height: 25vh;
+border: 1px solid #282727d4;
+margin: 10px;
+}
+.planContent h1 ,.planContent p{
+  text-align: left;
+}
+.planContent div:hover{
+  background-color: #ffffff62;
+  cursor: pointer;
+}
+.planContent div:focus{
+  background-color: #007bff00;
+}
+.adsContent>div{
+  width: 80%;
+  border: 1px solid #282727d4;
+  border-radius: 5px;
+  margin: 40px;
+}
+.adsContent p{
+  font-size: 18px;
+  color: #282727d4;
+  margin-bottom: 0;
+  text-align: left;
+  margin:0px 25px; 
+}
+.adsContent label{
+  margin:px; 
+}
+.adsContent input{
+  width: 25px;
+  height: 25px;
+}
+.sameForAll{
+  display: grid;
+  grid-template-columns: 350px 100px;
+  justify-content: space-between;
+}
+.sameForAll:nth-child(){
+  width:100%;
+  background-color: aqua;
+}
+.summary{
+  display: grid;
+  justify-content: center;
+}
+.summaryContent{
+  background-color: #e1e1e1;
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.summaryContent div{
+  display: flex;
+  height: 50px;
+  justify-content: space-between  ;
+  
+}
+.summaryContent h2 ,.summaryContent p{
+  font-size: 16px;
+}
+.summaryContent>div h2{
+  margin-bottom: -1px;
+}
+.summaryContent button{
+    position: inherit;
+    color: blue;
+    padding: 0;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 550;
+    background-color:rgba(255, 106, 0, 0);
+}
+.totalprice{
+  display: flex;
+  justify-content: space-around;
+}
+.totalprice h1{
+  color: blue;
+}
+
